@@ -1,0 +1,46 @@
+<html>
+   <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>无标题文档</title>
+
+<style type="text/css">
+#choose{
+ margin:200px 200px;
+}
+.daytime{
+ background: #0D0D0D;
+}
+.nigth{
+ background: #FFF;
+}
+</style>
+
+<script language="javascript" type="text/javascript">
+          function Switch()
+
+         {
+              var button = document.getElementById("bt");  //通过id获得button
+              var type = document.body.className;           //获得html里body的CSS样式表
+
+
+              if (type == "daytime")    //判断类的名称，如果类是"daytime"则点击button后，将类换为"night",背景的颜色就改变了
+                {
+                  document.body.className= "night";           //获得CSS样式表里的"night"类
+                  button.value = "close light";                         //button显示为close night
+                } else 
+                {
+                  document.body.className = "daytime";     //获得CSS样式表里的"daytime"类
+                  button.value = "open light";                         //button显示为open ligth
+                }
+        }
+
+</script>
+
+</head>
+
+    <body>
+        <div id="choose">
+            <input  id="bt" type="button" value="close light" onclick="Switch()" />
+        </div>
+    </body>
+</html>
